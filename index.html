@@ -4,132 +4,475 @@
  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio</title>
+    <title>Portifolio</title>
  </head>
  <style>
     body{
-        background-color: #f0e5c7;
-
+        background-color: #ab4b2e;
+        display: flex;
+        flex-direction: column;
     }
     #Cabeçalho{
-        background-color: #473f34;
+        background-color: #220300;
         height: 67px;
+        border-radius: 22px;
+        display: flex;
+        justify-content: center;
+    }
+    .seletores{
+        font-size: 20px;
+    }
+    .seletoresA{
+        padding:10px 10px;    
+        width: 95px;
+        top:50%;
+        background-color: #220300;
+        border-radius:15px;
+        color: #E7A859;
+        text-decoration: none;
+    }
+    .seletoresA:hover{
+        background-color: #611700;
+        color: #ffdeb5;
+        font-size: 27px;
+        font-weight: bolder;
+        transition: 0.3s;
+        transform: translate(50px,50px); 
     }
     #barra{
-        background-color: #473f34;
-        height: 65px;
+        background-color: #220300;
+        border-radius: 22px;
+        display: flex;
+        flex-direction: column;
     }
+    .esq{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: self-start;
+    }
+    .destaque{
+        font-weight: 600;
+        font-size:25px;
+    }
+    .destaque2{
+        font-weight: 600;
+        font-size:20px;
+    }
+    .intr{
+        font-weight: 500;
+        font-size:25px;
+        margin-bottom: 0px;
+    }
+    .botão{
+        padding: 5px 5px 5px 10px;    
+        width: 95px;
+        top:50%;
+        background-color: #220300;
+        border-radius:15px;
+    }
+    .botãoA{
+        color: #E7A859;
+        text-decoration: none;
+
+    }
+    .botão:hover{
+        background-color: #611700;
+        color: #ffdeb5;
+        padding: 10px 10px 10px 15px;
+        width: 165px;
+        border-radius: 17px;
+        font-weight: bolder;
+        transition: 0.3s;     
+        transform: rotate(2deg);        
+    }
+    .botãoA:hover{
+        color: #ffdeb5;
+        font-size: 27px;
+        font-weight: bolder;
+        transition: 0.3s;
+    }
+    .skillI{
+        height: 40px;
+        width: 40px;
+        border-radius: 25px;
+        background-color: #cf6747;
+    }
+    .skillI:hover{
+        transition: 0.3s;
+        border: wheat 2px solid;
+        transform: rotate(7deg);
+        transform: scale(2);
+        transform: translateY(-5px)
+    }
+    .bloco3{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #792f19;
+        border-radius: 15px;
+    }
+    .skill{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 25px;
+        
+    }
+    .skill1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .skill2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .title{
+        font-size:25px;
+        font-weight: bolder;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    #About\ me{
+        background-color: #cf6747;
+        border-radius: 25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .b1{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .skillD{
+        color: #E7A859;
+    }
+    .historic1{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    .historic{
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
+        align-items: center;
+    }
+    .sla{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo{
+        height: 45px;
+        border-radius: 10px;
+    }
+    .contact1{
+        display: flex;
+        flex-direction: row;
+        align-items: self-end;
+        justify-content: left;
+        padding: 10px;
+    }
+    .bloco1{
+        display: flex;
+        margin-bottom: 50px;
+    }
+    .bloco2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+    }
+    .imgh{
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+    }
+    .imgh:hover{
+        transition: 0.3s;
+        transform: scale(1.4)
+    }
+    .direita{
+        padding-left: 90px;
+    }
+    .icon{
+        opacity: 0;
+        height: 0px;
+    }
+    .icon:hover{
+        transform: rotate(360deg);
+        transition: 0.3s;
+    }
+    .subt{
+        color:#e4ac67
+    }
+    .presenta{
+        font-size: small;
+    }
+    .eu{
+        height: 120px;
+        padding-right: 10px;
+        border-radius: 15px;
+    }
+
+    @media(min-width: 768px){
+        .bloco1{
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            padding: 80px 0px 15px 0px;
+        }
+    
+    p{
+        font-size: 25px;
+    }
+    .presenta{
+        font-size: larger;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 100px;
+        padding-right: 50px;
+    }
+    .direita{
+        padding-left: 250px;
+    }
+    a{
+             font-size: 25px;
+        }
+    .botão{
+        width: 145px;
+    }
+    .subt{
+        font-size: 20px;
+    }
+    .imgc{
+        height: 250px;
+    }
+    .imgc:hover{
+        transition: 0.3s;
+        height: 270px;
+        transform: rotate(15deg);   
+    }
+    #About\ me {
+        padding: 0px 0px 50px 0px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    #skills {
+        padding: 0px 0px 50px 0px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .intr{
+        font-size: 50px;
+    }
+    .destaque{
+        font-size: 55px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .contact1{
+        align-items: center;
+        justify-content: center;
+    }
+    .sla{
+        padding: 0px 0px 50px 0px;
+    }
+    .icon{
+        opacity: 1;
+        height: 50px;
+    }
+    .barra{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+    .historic{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .divisao{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #barra{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bloco5{
+        display:flex;
+        flex-direction: row;
+    }
+    .eu{
+        height: 270px;
+        border-radius: 15%;
+        padding-right: 12px;
+    }
+
+}
  </style>
  <body>
-    <section id="Cabeçalho">
+    <header id="Cabeçalho">
         <div class="barra">
-            <img>
+            <img class="icon"src="settings.png">
             <div class="seletores">
-                <a href="#About Me" style=" color: #8c9657"> About Me</a>
-                <a href="#skills"   style=" color: #8c9657"> Skills</a>
-                <a href="#Contact"  style=" color: #8c9657"> Contact Me</a>
+                <a href="#About Me" class="seletoresA" > About Me</a>
+                <a href="#skills"   class="seletoresA" > Skills</a>
+                <a href="#AH" class="seletoresA"  > Historic</a>
+                <a href="#barra"  class="seletoresA" > Contact</a>
             </div>
         </div>
-    </section>
-    <section id="1">
+    </header>
+    <section id="b1">
         <div class="bloco1">
             <div class="esq">
-                <p style="font-size: medium;"> Hi, i'm <span class="destaque" style="font-size: medium;"> Ana Clara</span></p>
-                <p></p>
+                <p class="intr"> Hi, I'm <span class="destaque"> Ana Clara</span></p>
+                <p class="subt" style="padding-left:15px;">Highschool student</p>
                 <div class="botão">
-                    <a href="https://github.com/AnaClaraVS">Acesse Github</a>
+                    <a class="botãoA" href="https://github.com/AnaClaraVS">Acess Github</a></div>           
                 </div>
-            </div>
-            <div class="direita">
-                <img>
+            <div class="direita">                
+                <img class="imgc" src="Design sem nome.png"
+                height="127px">
+
             </div>
         </div>
     </section>
     <section id="About me">
-        <div class="bloco2">
-            <div class="img">
-                    <img>
-            </div>
             <p class="title">About Me</p>
-            <p></p>
+        <div class="bloco2">
+            <p class="presenta"> I’m Ana Clara, a creative, analytical person who loves
+                 combining art and science.
+                  I enjoy drawing, painting, and using technology to
+                   bring ideas to life.
+                    Strong in math, chemistry, biology, physics,
+                     and programming, I think quickly and lead with creativity.
+                      Whether alone or in a group, I mix logic and imagination to create innovative results.
+            </p>
+            <div class="img">
+                    <img class="eu" src="Captura de tela 2025-11-11 152858.png"> </div>
         </div>
     </section>
     <section id="skills">
         <p class="title"> Skills</p>
         <div class="bloco3">
-            <div class="skill"> 
-                    <img class="skillI">
-                    <p class="skillD">Html</p> 
-                </div>
+            <div class="skill1">
+                  <div class="skill"> 
+                        <img class="skillI" src="HTML5_logo_and_wordmark.svg.png">
+                        <p class="skillD">Html</p> 
+                    </div>
+                      <div class="skill"> 
+                        <img class="skillI" src="CSS3_logo_and_wordmark.svg">
+                        <p class="skillD">CSS</p> 
+                     </div>
+                      <div class="skill"> 
+                        <img class="skillI" src="C_Logo.png">
+                        <p class="skillD">C</p> 
+                      </div>
+                        <div class="skill"> 
+                        <img class="skillI" src="icon.webp">
+                        <p class="skillD">Ibis Paint X</p> 
+                    </div>
+            </div>
+            <div class="skill2">
                 <div class="skill"> 
-                    <img class="skillI">
-                    <p class="skillD">CSS</p> 
-                </div>
-                <div class="skill"> 
-                    <img class="skillI">
-                    <p class="skillD">C</p> 
-                 </div>
-                <div class="skill"> 
-                    <img class="skillI">
-                    <p class="skillD">JavaScript</p> 
-                </div>
-                <div class="skill"> 
-                    <img class="skillI">
+                    <img class="skillI" src="Canva-New-Logo.png">
                     <p class="skillD">Canva</p> 
                 </div>
                 <div class="skill"> 
-                    <img class="skillI">
+                    <img class="skillI" src="art_logo.webp">
                     <p class="skillD">Art</p> 
                 </div>
                 <div class="skill"> 
-                    <img class="skillI">
-                    <p class="skillD">Exact / Sciences </p> 
+                    <img class="skillI" src="mission-statement-helix.webp">
+                    <p class="skillD">Exact Sciences </p> 
                 </div>
                 <div class="skill"> 
-                    <img class="skillI">
+                    <img class="skillI" src="Flag_of_the_United_Kingdom_(3-5).svg.png">
                    <p class="skillD">English</p> 
             </div>
         </div>
+        </div>
     </section>
     <section id="AH">
+        <p class="title">Historic</p>
+        <div class="divisao">
         <div class="bloco4">
+            <div class="historic">
+                <p class="destaque">➥</p>
+                <img class="imgh" src="Captura de tela 2025-11-18 144858.png">
+                <p class="subt"><span class="destaque2"> Honors</span> in best grade in class at high-school always having +8,5 grades media in the four bimesters. 
+                 Along with a first place medal in english spelling be and winning in first place on a art competition from school with the theme "Brain week"</p>
+            </div>
+            <div class="historic">
+                <p class="destaque">➥</p>
+                <img class="imgh" src="Captura de tela 2025-11-11 152818.png">
+                <p class="subt"><span class="destaque2"> Medieval fair</span>, a class project to join the school Scientific Fair, 
+                    having many topics and explaining especifically about the Medieval games and their objectives. The presentation went along with a medieval themed dance.</p>
+            </div>
+            </div>
+        <div class="bloco4.5">
             <div class="historic1">
-                <img>
-                <p></p>
+                <p class="destaque">➥</p>
+                <img class="imgh" src="Captura de tela 2025-11-11 153420.png">
+                <p class="subt">Creating my own<span class="destaque2"> Personal Projects</span>, art projects, architectural plan, technological projects and my own
+                     websites like this one made by myself. A special one is an original idea, a online school call, where we planned a technological way to make the school call, so the teachers don't waste time 
+                    knowing which students are in class and which not.</p>
             </div>
-            <div class="historic2">
-                <img>
-                <p></p>
-            </div>
-            <div class="historic3">
-                <img>
-                <p></p>
-            </div>
-            <div class="historic4">
-                <img>
-                <p></p>
+            <div class="historic1">
+                <p class="destaque">➥</p>
+                <img class="imgh" src="Captura de tela 2025-10-30 115004.png">
+                <p class="subt"><span class="destaque2"> IT extracurricular </span> in high-school. Participate in a IT highschool course through the three years of brazilian highschool, we learn about programming for internet, programming logic, design and media,
+                robotics, maintenance de hardware and we learned more about being creative, inovation and technology mixed all together, etc.</p>
             </div>
         </div>
+        </div>
     </section>
-    <section id="Contact">
+    <div class="sla">
+        <img src="comic-speech-bubble-png.webp"
+        height="45px">
+        <p><spam class="destaque">"</spam>Inovar é o futuro da humanidade<spam class="destaque">"</spam></p>
+    </div>
+    <footer id="barra">
+        <p class="title" style="color: #E7A859;"> Contact Me</p>
         <div class="bloco5">
-            <p class="title"> Contact Me</p>
             <div class="contact1">
-                <img>
-                <p>ac.sanches09@gmail.com</p>
+                <img class="logo" src="images.png">
+                <p style="color: #E7A859;">ac.sanches09@gmail.com</p>
             </div>
-            <div class="contact2">
-                <img>
-                <a href="https://www.instagram.com/anaclara.veronez?igsh=d3B2cmJxemM0cHVv">@ana.veronez</a>
+            <div class="contact1">
+                <img class="logo" src="Instagram_logo_2022.svg.webp">
+                <a style="color: #E7A859; text-decoration: none;" href="https://www.instagram.com/anaclara.veronez?igsh=d3B2cmJxemM0cHVv">@ana.veronez</a>
             </div>
-            <div class="contact3">
-                <img>
-                <p>+55 44 99837-9021</p>
+            <div class="contact1">
+                <img class="logo" src="istockphoto-1180028723-612x612.jpg">
+                <p style="color: #E7A859;">+55 44 99837-9021</p>
             </div>
-        </div>
-    </section>
-    <section id="barra">
 
-    </section>
+        </footer>
  </body>
  </html>
